@@ -3,13 +3,15 @@ $LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__))
 require "sinatra"
 require "active_record"
 require "active_support/all"
+require "dotenv"
+require "json"
+require "slack-ruby-client"
 
 require "emilie"
+require "slack"
 
 require "app"
 
-ActiveRecord::Base.establish_connection(Emilie.active_record_config)
+Dotenv.load unless Sinatra::Base.production?
 
-if __FILE__ == $PROGRAM_NAME
-  Emilie::App.run!
-end
+ActiveRecord::Base.establish_connection(Emilie.config[:active_record])
