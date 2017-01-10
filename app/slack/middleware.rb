@@ -1,4 +1,4 @@
-module Emilie::Slack
+module Bloo::Slack
   class Middleware
     def initialize(app)
       @app = app
@@ -14,7 +14,7 @@ module Emilie::Slack
     private
 
     def own_message?(request)
-      request.params["user_name"] == Emilie.config[:slack][:bot_name]
+      request.params["user_name"] == Bloo.config[:slack][:bot_name]
     end
   end
 end

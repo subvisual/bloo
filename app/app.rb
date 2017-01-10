@@ -1,4 +1,4 @@
-module Emilie
+module Bloo
   class App < Sinatra::Base
     get "/" do
       "Hello, world!"

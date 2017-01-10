@@ -1,18 +1,15 @@
-Emilie
+Bloo
 ============
 
-Emilie is a Slack bot that makes sure we wash our dishes and the office is nice
+Bloo is a Slack bot that makes sure we wash our dishes and the office is nice
 and cozy.
 
 **Table of Contents**
 
 * [Setup](#setup)
 * [Development](#development)
-* [Deployment](#deployment)
-* [More Sections](#more-sections)
 * [Contribution Guidelines](#contribution-guidelines)
-* [Resources](#resources)
-* [Contacts](#contacts)
+* [About](#about)
 
 Setup
 -----
@@ -20,8 +17,8 @@ Setup
 First, clone & setup the repository:
 
 ```
-git clone git@github.com:subvisual/emilie.git
-cd emilie
+git clone git@github.com:subvisual/bloo.git
+cd bloo
 bin/setup
 ```
 
@@ -49,9 +46,10 @@ Contribution Guidelines
 Contributions must follow [Subvisual's guides](https://github.com/subvisual/guides).
 
 About
------
+------
 
-Emilie is maintained by [Subvisual](http://subvisual.co).
+~~Bloo is maintained by [Subvisual](http://subvisual.co)~~. Actually, it's
+Subvisual that's maintained by Bloo
 
 [![Subvisual](https://raw.githubusercontent.com/subvisual/guides/master/github/templates/subvisual_logo_with_name.png)](http://subvisual.co)
 

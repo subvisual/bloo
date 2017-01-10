@@ -11,9 +11,9 @@ unless Sinatra::Base.production?
   Dotenv.load
 end
 
-require "emilie"
+require "bloo"
 require "slack"
 
 require "app"
 
-ActiveRecord::Base.establish_connection(Emilie.config[:active_record])
+ActiveRecord::Base.establish_connection(Bloo.config[:active_record])

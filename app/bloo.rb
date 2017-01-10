@@ -1,4 +1,4 @@
-module Emilie
+module Bloo
   class << self
     def config
       @_config ||= { active_record: active_record_config, slack: slack_config }

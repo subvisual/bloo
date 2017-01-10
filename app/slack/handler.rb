@@ -1,4 +1,4 @@
-module Emilie::Slack
+module Bloo::Slack
   class Handler
     class << self
       def perform(message)
@@ -11,7 +11,7 @@ module Emilie::Slack
       private
 
       def own_name
-        Emilie.config[:slack][:name]
+        Bloo.config[:slack][:name]
       end
     end
   end
