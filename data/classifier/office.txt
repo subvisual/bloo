@@ -1,0 +1,13 @@
+office:@office
+office:who's at the office?
+office:is someone at the office?
+office:is there someone by the office?
+office:alguém pelo escritório?
+office:alguém pelo office?
+office:alguém no office?
+office:alguém no escritório?
+office:quem está no office?
+office:quem está no escritório?
+office:can you tell me who's at the office?
+office:sabes dizer quem está pelo escritório?
+office:sabes dizer-me quem está pelo escritório?

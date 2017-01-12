@@ -3,9 +3,8 @@ module Bloo
     def config
       @_config ||= {
         active_record: active_record_config,
-        slack: slack_config,
         atmos: atmos_config,
-      }
+      }.merge(bloo_config)
     end
 
     private
@@ -16,16 +15,15 @@ module Bloo
       yaml
     end
 
-    def slack_config
-      yaml = load_yaml("config/slack.yml")
-      yaml[:request_token] ||= ENV["SLACK_REQ_TOKEN"]
-      yaml
-    end
-
     def atmos_config
       {
         token: ENV["ATMOS_TOKEN"],
       }
+    end
+
+    def bloo_config
+      load_yaml("config/bloo.yml").
+        deep_merge(slack: { token: ENV["SLACK_REQ_TOKEN"] })
     end
 
     def load_yaml(file)

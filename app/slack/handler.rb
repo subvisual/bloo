@@ -2,11 +2,13 @@ module Bloo::Slack
   class Handler
     class << self
       def perform(message)
-        case message[:text]
-        when /^hi #{own_name}/i
-          "Bonjour #{message[:user_name]}"
-        when /who['’]?s at the office\??/i, /@office/i
-          online_users
+        case message[:category]
+        when "Greeting"
+          "Bonsoir #{message[:user_name]}."
+        when "Office"
+          "Well, I see #{online_users}."
+        else
+          "I'm sorry, I couldn't understand that."
         end
       end
 
@@ -18,12 +20,16 @@ module Bloo::Slack
 
       def identify_users(users)
         users.
-          map { |user| user[:first_name] << " " << user[:last_name] }.
+          map { |user| full_name(user) }.
           join(", ")
       end
 
+      def full_name(user)
+        user[:first_name] << " " << user[:last_name]
+      end
+
       def own_name
-        Bloo.config[:slack][:name]
+        Bloo.config[:name]
       end
     end
   end

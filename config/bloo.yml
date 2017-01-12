@@ -1,0 +1,13 @@
+name: "bloo"
+
+slack:
+  bot_name: "slackbot"
+
+classifier:
+  categories:
+    - office
+    - greeting
+
+  datasets:
+    - data/classifier/office.txt
+    - data/classifier/greeting.txt

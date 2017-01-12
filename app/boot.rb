@@ -4,6 +4,7 @@ $LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__))
 require "sinatra"
 require "active_record"
 require "active_support/all"
+require "classifier-reborn"
 require "httparty"
 require "json"
 require "slack-ruby-client"
@@ -15,6 +16,7 @@ end
 
 # Require lib and utils
 require "lib/net"
+require "lib/classifier"
 
 # Define Bloo and configs
 require "bloo"

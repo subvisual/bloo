@@ -1,0 +1,7 @@
+greeting:hi
+greeting:hello
+greeting:olá
+greeting:bonjour
+greeting:sup
+greeting:yo
+greeting:bonsoir
