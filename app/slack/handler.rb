@@ -13,21 +13,13 @@ module Bloo::Slack
       private
 
       def online_users
-        tag_users Bloo::Atmos::Office.users
+        identify_users Bloo::Atmos::Office.users
       end
 
-      def tag_users(users)
+      def identify_users(users)
         users.
-          map { |user| tag_or_identify(user) }.
+          map { |user| user[:first_name] << " " << user[:last_name] }.
           join(", ")
-      end
-
-      def tag_or_identify(user)
-        if user[:slack_username]
-          "<@#{user[:slack_username]}>"
-        else
-          user[:first_name] << " " << user[:last_name]
-        end
       end
 
       def own_name
