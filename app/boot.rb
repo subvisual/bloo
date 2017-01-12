@@ -1,8 +1,10 @@
 $LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__))
 
+# Require all gems
 require "sinatra"
 require "active_record"
 require "active_support/all"
+require "httparty"
 require "json"
 require "slack-ruby-client"
 
@@ -11,7 +13,14 @@ unless Sinatra::Base.production?
   Dotenv.load
 end
 
+# Require lib and utils
+require "lib/net"
+
+# Define Bloo and configs
 require "bloo"
+
+# Require components
+require "atmos"
 require "slack"
 
 require "app"

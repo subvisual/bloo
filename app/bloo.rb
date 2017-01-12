@@ -1,7 +1,11 @@
 module Bloo
   class << self
     def config
-      @_config ||= { active_record: active_record_config, slack: slack_config }
+      @_config ||= {
+        active_record: active_record_config,
+        slack: slack_config,
+        atmos: atmos_config,
+      }
     end
 
     private
@@ -16,6 +20,12 @@ module Bloo
       yaml = load_yaml("config/slack.yml")
       yaml[:request_token] ||= ENV["SLACK_REQ_TOKEN"]
       yaml
+    end
+
+    def atmos_config
+      {
+        token: ENV["ATMOS_TOKEN"],
+      }
     end
 
     def load_yaml(file)

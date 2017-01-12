@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gem "activerecord"
 gem "activesupport"
+gem "httparty"
 gem "pg"
 gem "puma"
 gem "rake"
