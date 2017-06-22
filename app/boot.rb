@@ -22,7 +22,6 @@ require "lib/classifier"
 require "bloo"
 
 # Require components
-require "atmos"
 require "slack"
 
 require "app"
