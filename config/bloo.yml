@@ -7,7 +7,9 @@ classifier:
   categories:
     - office
     - greeting
+    - identification
 
   datasets:
     - data/classifier/office.txt
     - data/classifier/greeting.txt
+    - data/classifier/identification.txt

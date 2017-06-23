@@ -10,7 +10,11 @@ module Bloo
     private
 
     def slack_params
-      params.merge(category: classifier.classify(params[:text]))
+      params.merge(category: message_category)
+    end
+
+    def message_category
+      classifier.classify(params[:text])
     end
   end
 end
