@@ -2,7 +2,7 @@ $LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__))
 
 # Require all gems
 require "sinatra"
-require "active_record"
+require "sinatra/activerecord"
 require "active_support/all"
 require "classifier-reborn"
 require "httparty"
@@ -26,4 +26,4 @@ require "slack"
 
 require "app"
 
-ActiveRecord::Base.establish_connection(Bloo.config[:active_record])
+set :database_file, "../config/database.yml"

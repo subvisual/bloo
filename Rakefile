@@ -1,5 +1,6 @@
 require "rake"
 require "sinatra"
+require "sinatra/activerecord/rake"
 
 $LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__) + "/app")
 
