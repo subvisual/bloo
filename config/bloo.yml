@@ -13,3 +13,7 @@ classifier:
     - data/classifier/office.txt
     - data/classifier/greeting.txt
     - data/classifier/identification.txt
+
+satellite:
+  host: 'localhost'
+  port: 8000

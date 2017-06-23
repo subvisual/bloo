@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20170623161922) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "device"
+    t.index ["username", "device"], name: "index_users_on_username_and_device", unique: true
   end
 
 end

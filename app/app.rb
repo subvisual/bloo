@@ -9,5 +9,9 @@ module Bloo
     def classifier
       Bloo::Classifier.instance
     end
+
+    def satellite
+      Bloo::Satellite.instance
+    end
   end
 end

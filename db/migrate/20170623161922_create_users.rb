@@ -4,5 +4,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :username
       t.string :device
     end
+
+    add_index :users, [:username, :device], unique: true
   end
 end

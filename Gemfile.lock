@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:subvisual/satellite.git
-  revision: 0e8a9ef7932423a9deb8dc133eb1106762ef24dc
+  revision: 15790db984f520464a3d71d7dfe50736aa9562a4
   specs:
     satellite (0.1.0)
       activesupport (~> 5.1.0)
